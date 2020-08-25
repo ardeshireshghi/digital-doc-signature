@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const { readFileSync} = require('fs');
+const { readFileSync } = require('fs');
 
 const privateKey = readFileSync('./node-key.pem');
 
@@ -10,4 +10,3 @@ signer.on('finish', () => {
 });
 
 process.stdin.pipe(signer);
-
